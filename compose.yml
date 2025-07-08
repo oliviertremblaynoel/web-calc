@@ -1,0 +1,7 @@
+# dclint disable service-image-require-explicit-tag
+name: web-calc
+services:
+  app:
+    image: oliviertremblaynoel/web-calc:latest
+    ports:
+      - '0.0.0.0:7681:7681' # ttyd
