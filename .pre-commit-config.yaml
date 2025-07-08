@@ -1,9 +1,9 @@
 # Run manually
-# pre-commit run --all-files -v
+#     pre-commit run --all-files -v
 
+###
 # Upgrade linter versions with command :
-#   pre-commit autoupdate
-
+#     pre-commit autoupdate
 repos:
 ############
 # SECURITY
@@ -12,7 +12,6 @@ repos:
     hooks:
       - id: gitleaks
         name: "🔒 security · Detect hardcoded secrets"
-
 ############
 # ALL FILES
   - repo: https://github.com/pre-commit/pre-commit-hooks
@@ -20,14 +19,22 @@ repos:
     hooks:
       - id: trailing-whitespace
       - id: end-of-file-fixer
-
-############
-# DOCKERFILES
-  - repo: https://github.com/hadolint/hadolint
-    rev: v2.13.1-beta
-    hooks:
-      - id: hadolint-docker
-
+      - id: check-added-large-files
+      - id: check-merge-conflict
+      - id: check-yaml
+      - id: check-json
+      - id: check-toml
+      - id: detect-private-key
+      - id: mixed-line-ending
+      - id: check-case-conflict
+      - id: forbid-submodules
+      - id: check-symlinks
+      - id: pretty-format-json
+      - id: requirements-txt-fixer
+      - id: sort-simple-yaml
+      - id: file-contents-sorter
+      - id: check-shebang-scripts-are-executable
+      - id: check-executables-have-shebangs
 ############
 # BASH SCRIPTS
   - repo: https://github.com/shellcheck-py/shellcheck-py
@@ -36,6 +43,12 @@ repos:
       - id: shellcheck
         name: "🐚 shell · Lint shell scripts"
 
+############
+# DOCKERFILES
+  - repo: https://github.com/hadolint/hadolint
+    rev: v2.13.1-beta
+    hooks:
+      - id: hadolint-docker
 ################################
 # DOCKER COMPOSE YAML MANIFESTS
   - repo: https://github.com/docker-compose-linter/pre-commit-dclint
