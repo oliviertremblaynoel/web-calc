@@ -4,6 +4,7 @@
 ###
 # Upgrade linter versions with command :
 #     pre-commit autoupdate
+
 repos:
 ############
 # SECURITY

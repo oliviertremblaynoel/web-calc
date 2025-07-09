@@ -3,5 +3,7 @@ name: web-calc
 services:
   app:
     image: oliviertremblaynoel/web-calc:latest
+    volumes:
+      - ${WEBCALC_CONFIG_VOL}=/root/.config/qalculate
     ports:
-      - '0.0.0.0:7681:7681' # ttyd
+      - '0.0.0.0:80:80' # ttyd browser shell
