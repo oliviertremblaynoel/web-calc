@@ -1,5 +1,5 @@
 # hadolint ignore=DL3007
-FROM alpine:3.19
+FROM alpine:3.22
 LABEL \
     org.opencontainers.image.title="Qualculate" \
     org.opencontainers.image.description="Qalculate served in the browser using TTYD" \
