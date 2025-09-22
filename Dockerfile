@@ -1,5 +1,5 @@
 # hadolint ignore=DL3007
-FROM ubuntu:utopic-20150319
+FROM ubuntu:plucky
 # LABEL \
 #     org.opencontainers.image.title="Qualculate" \
 #     org.opencontainers.image.description="Qalculate served in the browser using TTYD" \
