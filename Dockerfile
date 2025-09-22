@@ -1,5 +1,5 @@
 # hadolint ignore=DL3007
-FROM alpine:latest
+FROM alpine:3.20
 
 LABEL \
     org.opencontainers.image.title="Qualculate" \
